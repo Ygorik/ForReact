@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 @app.get("/books")
-async def get_all_pressure():
+async def get_all_books():
     with Session(engine) as session:
         sel = select(Book)
         books = session.exec(sel).all()
